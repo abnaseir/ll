@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Personal Portfolio">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(45deg, #ff6f91, #ff9671, #ffc75f);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #333;
+        }
+
+        #home {
+            height: 100vh;
+            background: linear-gradient(135deg, #ffc75f, #f9f871, #ff9671);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 2s ease-in-out;
+            text-align: center;
+        }
+
+        #home h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite alternate;
+        }
+
+        #home p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #ff6f91;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff9671;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #about {
+            background-color: #f9f871;
+            color: #333;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #projects {
+            background-color: #ff6f91;
+            color: white;
+        }
+
+        #projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .project-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 30%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        form label {
+            margin-bottom: 10px;
+            text-align: left;
+            font-size: 1.2rem;
+        }
+
+        form input, form textarea {
+            padding: 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form button {
+            background-color: #ffc75f;
+            color: #fff;
+            padding: 12px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #f9f871;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="welcome-section">
+            <h1>Hello, I'm Abdulaziz Naseir</h1>
+            <p>A passionate combuter eng in kku who loves to create amazing projects!</p>
+            <button id="scrollAbout">Explore More</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a [Your Profession], skilled in [Your Skills]. My passion is creating enjoyable and functional digital experiences.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>A brief description of Project 1 goes here.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>A brief description of Project 2 goes here.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <p>A brief description of Project 3 goes here.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll to "About" section when the button is clicked
+        document.getElementById('scrollAbout').addEventListener('click', function() {
+            document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Form validation and simple message submission simulation
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your message!');
+            document.getElementById('contact-form').reset();
+        });
+    </script>
+</body>
+</html>
